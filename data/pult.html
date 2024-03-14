@@ -1,0 +1,135 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="pult.css" />
+  <script src="jquery-3.7.1.min.js"></script>
+  <script src="pult.js"></script>
+
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="pult">
+    <div class="pult__menu">
+      <div class="pult__title">WunderPult</div>
+      <div class="pult__mode"></div>
+      <div class="pult__tabs">
+        <div class="tab active" id="setup">
+          <img src="setup.png" />
+          <div class="tab__text">Настройки</div>
+        </div>
+
+        <div class="tab" id="log">
+          <img src="setup.png" />
+          <div class="tab__text">Лог</div>
+        </div>
+      </div>
+    </div>
+    <div class="pult__setup">
+      <div class="setupcontainer">
+        <div class="pult__setupdata">
+          <div class="group">
+            <div class="group__name">Подключение Wi-Fi</div>
+            <div class="group__item">
+              <div class="item__name">Имя сети</div>
+              <input class="item__input" type="text" />
+            </div>
+            <div class="group__item">
+              <div class="item__name">Логин</div>
+              <input class="item__input" type="text" />
+            </div>
+            <div class="group__item">
+              <div class="item__name">Пароль</div>
+              <input class="item__input" type="text" />
+            </div>
+          </div>
+
+          <div class="group">
+            <div class="group__name">IP-адрес</div>
+            <div class="group__item">
+              <div class="item__name">IP</div>
+              <input class="item__input" type="text" />
+            </div>
+            <div class="group__item">
+              <div class="item__name">Маска</div>
+              <input class="item__input" type="text" />
+            </div>
+            <div class="group__item">
+              <div class="item__name">Шлюз</div>
+              <input class="item__input" type="text" />
+            </div>
+          </div>
+
+          <div class="group">
+            <div class="group__name">Прочее</div>
+            <div class="group__item">
+              <div class="item__name">Имя пульта</div>
+              <input class="item__input" type="text" />
+            </div>
+            <div class="group__item">
+              <div class="item__name">Адрес приемника</div>
+              <input class="item__input" type="text" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="logcontainer">
+        <div class="logitem">
+          <div class="logitem__date">21.05.24 14:15:45</div>
+          <div class="logitem__data">Нажата кнопка2 </div>
+        </div>
+        <div class="logitem">
+          <div class="logitem__date">21.05.24 14:15:45</div>
+          <div class="logitem__data">Нажата кнопка2 </div>
+        </div>
+        <div class="logitem">
+          <div class="logitem__date">21.05.24 14:15:45</div>
+          <div class="logitem__data">Нажата кнопка2 </div>
+        </div>
+        <div class="logitem">
+          <div class="logitem__date">21.05.24 14:15:45</div>
+          <div class="logitem__data">Нажата кнопка2 </div>
+        </div>
+        <div class="logitem">
+          <div class="logitem__date">21.05.24 14:15:45</div>
+          <div class="logitem__data">Нажата кнопка2 </div>
+        </div>
+        <div class="logitem">
+          <div class="logitem__date">21.05.24 14:15:45</div>
+          <div class="logitem__data">Нажата кнопка2 </div>
+        </div>
+
+      </div>
+      <div class="pult_setupbuttons">
+        <div class="savebutton">Применить</div>
+      </div>
+    </div>
+    <div class="pult__buttons"></div>
+    <div class="pult__footer"></div>
+  </div>
+
+  <div class="buttondialog">
+    <div class="buttondialog__header">Настройка кнопки</div>
+    <div class="buttondialog__data">
+      <div class="item">
+        <div class="item__name">Текст кнопки</div>
+        <input class="item__input" type="text" />
+      </div>
+      <div class="item">
+        <div class="item__name">Номер выхода</div>
+        <input class="item__input" type="text" />
+      </div>
+      <div class="item">
+        <div class="item__name">Команда</div>
+        <input class="item__input" type="text" />
+      </div>
+    </div>
+    <div class="buttondialog__footer">    <div class="savebutton">Применить</div><div class="cancelbutton">Отмена</div>    </div>
+
+  </div>
+</body>
+
+</html>

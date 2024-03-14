@@ -1,0 +1,349 @@
+$color :#fff;
+$bodycolor:#37363d;
+
+$backgroundcolor:#292b2f;
+
+$darkenlevel:2;
+
+body {
+    background: $bodycolor;
+}
+
+.pult {
+    display: grid;
+    grid-template-rows: 40px 340px 1fr 20px;
+    width: calc(100% - 60px);
+    height: calc(100vh - 60px);
+    margin: 30px;
+    border: solid 1px lighten($backgroundcolor, 5);
+    ;
+    border-radius: 5px;
+    font-family: tahoma;
+    background: $backgroundcolor;
+    color: lighten($backgroundcolor, 45);
+}
+
+.pult__menu {
+    display: grid;
+    grid-template-columns: 1fr 200px 300px;
+
+
+    .pult__title {
+
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        font-size: 24px;
+        padding-left: 30px;
+    }
+
+    .pult__tabs {
+        display: inline-flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        padding-right: 20px;
+
+        .tab {
+            cursor: pointer;
+            margin: 0 2px;
+            display: inline-grid;
+
+            grid-template-columns: 30px 1fr;
+
+            img {
+                width: 100%;
+                height: auto;
+                display: block;
+                margin: auto;
+                position: relative;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                opacity: 0.7
+            }
+
+            .tab__text {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 10px 15px;
+            }
+
+        }
+
+        .tab:hover {
+            .tab__text {
+                color: #fff;
+            }
+
+            img {
+                opacity: 1
+            }
+        }
+
+        .active {
+            background: darken($backgroundcolor, $darkenlevel);
+            border-top: 4px solid orange;
+            border-left: solid 2px lighten($backgroundcolor, 5);
+            border-right: solid 2px lighten($backgroundcolor, 5);
+
+        }
+
+
+        .active:hover {
+            background: darken($backgroundcolor, $darkenlevel+10);
+            border-top: 4px solid rgb(255, 184, 51);
+        }
+
+    }
+
+}
+
+.pult__setup {
+
+
+    background: darken($backgroundcolor, $darkenlevel);
+    padding: 20px 70px;
+    display: grid;
+    grid-template-rows: 1fr 40px;
+
+
+    .logcontainer {
+        display: none;
+    }
+
+    .logitem {
+        display: grid;
+        grid-template-columns: 150px 1fr;
+    }
+
+    .logitem__date {
+        color: lighten($backgroundcolor, 45);
+    }
+
+    .logitem__data {
+        color: lighten($backgroundcolor, 35);
+    }
+
+
+    .pult__setupdata {
+        padding: 20px 40px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+
+    }
+
+    .pult_setupbuttons {
+        .savebutton {
+            display: inline-block;
+            background: olivedrab;
+            color: #fff;
+            margin: 10px;
+            padding: 10px;
+            float: right;
+            cursor: pointer;
+            display: none;
+        }
+
+        .savebutton:hover {
+            background: lighten(olivedrab, 4);
+        }
+    }
+
+
+    .group {
+        border-left: solid 2px lighten($backgroundcolor, 5);
+        padding: 20px 40px;
+        cursor: pointer;
+
+        .group__name {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        .group__item {
+            display: grid;
+            max-width: 500px;
+            grid-template-columns: 150px 1fr;
+            margin-bottom: 10px;
+            margin-left: 30px;
+        }
+
+        .item__name {
+            font-size: 18px;
+        }
+
+        .item__input {
+            display: block;
+            height: 30px;
+            font-size: 18px;
+            background: darken($backgroundcolor, $darkenlevel);
+            ;
+            border: solid 1px lighten($backgroundcolor, 15);
+            color: lighten($backgroundcolor, 45);
+        }
+    }
+
+    .group:hover {
+        background: lighten(darken($backgroundcolor, $darkenlevel), 1);
+        ;
+
+        .group__name {
+            color: $color;
+        }
+    }
+
+
+}
+
+.pult__buttons {
+    display: grid
+}
+
+.button {
+    border: solid 1px lighten($backgroundcolor, 5);
+    display: grid;
+    grid-template-columns: 10px 1fr 70px;
+    align-items: center;
+    justify-content: center;
+    ;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.button:hover {
+    background: lighten($backgroundcolor, 5);
+
+    .button__setup {
+        opacity: 1;
+    }
+}
+
+.pushed {
+    background: orange
+}
+
+.blured {
+    background: #ccc
+}
+
+.notpushed {
+    background: olivedrab;
+}
+
+.button__status {
+    display: flex;
+    width: 100%;
+    height: 70px;
+
+}
+
+.button__name {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button__setup {
+    opacity: 0.1;
+}
+
+.pult__footer {}
+
+
+.buttondialog {
+    display: grid;
+    position: fixed;
+    margin: auto;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: darken($backgroundcolor, $darkenlevel);
+    width: 50%;
+    max-width: 500px;
+    height: 300px;
+    font-family: tahoma;
+    color: #fff;
+    border: solid 1px lighten($backgroundcolor, 7);
+    border-left: solid 3px orange;
+    box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.2);
+    grid-template-rows: 60px 1fr 60px;
+    display:none;
+
+
+
+    .buttondialog__header {
+        padding: 20px;
+        background: $backgroundcolor;
+    }
+
+    .buttondialog__data {
+        padding: 20px;
+        display: grid;
+
+        .item {
+
+            display: grid;
+            max-width: 500px;
+            grid-template-columns: 150px 1fr;
+            margin-bottom: 10px;
+            margin-left: 30px;
+
+            .item__name {
+                font-size: 18px;
+                color: lighten($backgroundcolor, 45);
+            }
+
+
+            .item__input {
+                display: block;
+                height: 30px;
+                font-size: 18px;
+                background: darken($backgroundcolor, $darkenlevel);
+                ;
+                border: solid 1px lighten($backgroundcolor, 15);
+                color: lighten($backgroundcolor, 45);
+            }
+        }
+
+
+    }
+
+    .buttondialog__footer {
+        padding-right: 20px;
+        .cancelbutton {
+            display: inline-block;
+            background: orange;
+            color: #fff;
+            margin: 3px;
+            padding: 10px;
+            float: right;
+            cursor:pointer;
+           
+        }
+
+        .cancelbutton:hover {
+            background: lighten(orange, 4);
+        }
+        
+        .savebutton {
+            display: inline-block;
+            background: olivedrab;
+            color: #fff;
+            margin: 3px;
+            padding: 10px;
+            float: right;
+            cursor:pointer;
+   
+        }
+
+        .savebutton:hover {
+            background: lighten(olivedrab, 4);
+        }
+    }
+}
